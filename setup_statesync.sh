@@ -10,7 +10,7 @@ if [ ! -d "$(pwd)/.oraid2" ]; then
 
     SEED=e18f82a6da3a9842fa55769955d694f62f7f48bd@seed1.orai.zone:26656,893f246ffdffae0a9ef127941379303531f50d5c@seed2.orai.zone:26656,4fa7895fc43f618b53cd314585b421ee47b75639@seed3.orai.zone:26656,defeea41a01b5afdb79ef2af155866e122797a9c@seed4.orai.zone:26656
     SNAP_IP4=${SNAP_IP3:-"rpc.orai.mortysnode.nl"}
-	SNAP_IP3=${SNAP_IP3:-"statesync3.orai.zone"}
+    SNAP_IP3=${SNAP_IP3:-"statesync3.orai.zone"}
     SNAP_IP2=${SNAP_IP2:-"statesync2.orai.zone"}
     SNAP_IP1=${SNAP_IP1:-"statesync1.orai.zone"}
     CHAIN_ID="Oraichain"
@@ -24,7 +24,7 @@ if [ ! -d "$(pwd)/.oraid2" ]; then
     SNAP_RPC2=http://$SNAP_IP2:$PEER_RPC_PORT
     SNAP_RPC1=http://$SNAP_IP1:$PEER_RPC_PORT
 
-    PEER_ID4=$(curl --no-progress-meter $SNAP_RPC3/status | jq -r '.result.node_info.id')
+    PEER_ID4=$(curl --no-progress-meter $SNAP_RPC4/status | jq -r '.result.node_info.id')
     PEER_ID3=$(curl --no-progress-meter $SNAP_RPC3/status | jq -r '.result.node_info.id')
     PEER_ID2=$(curl --no-progress-meter $SNAP_RPC2/status | jq -r '.result.node_info.id')
     PEER_ID1=$(curl --no-progress-meter $SNAP_RPC1/status | jq -r '.result.node_info.id')
